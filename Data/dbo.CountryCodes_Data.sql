@@ -1,3 +1,4 @@
+INSERT INTO [dbo].[CountryCodes] ([CountryCode], [CountryName]) VALUES (N'HWKI', N'Hawkins')
 INSERT INTO [dbo].[CountryCodes] ([CountryCode], [CountryName]) VALUES (N'AE', N'UNITED ARAB EMIRATES')
 INSERT INTO [dbo].[CountryCodes] ([CountryCode], [CountryName]) VALUES (N'AF', N'AFGHANISTAN')
 INSERT INTO [dbo].[CountryCodes] ([CountryCode], [CountryName]) VALUES (N'AG', N'ANTIGUA AND BARBUDA')

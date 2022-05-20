@@ -12,8 +12,10 @@ CREATE TABLE [dbo].[Contacts]
 [ModifiedDate] [datetime] NULL,
 [Email] [nvarchar] (256) COLLATE Latin1_General_CI_AS NULL,
 [Photo] [image] NULL,
-[LinkedIn] [nvarchar] (128) COLLATE Latin1_General_CI_AS NULL
+[LoyaltyCardStatus] [nchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
 ) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Contacts] ADD CONSTRAINT [CK_Contacts] CHECK (([LoyaltyCardStatus]='Gold' OR [LoyaltyCardStatus]='Silver' OR [LoyaltyCardStatus]='Bronze'))
 GO
 ALTER TABLE [dbo].[Contacts] ADD CONSTRAINT [PK__Contacts__912F378B7C53D1A0] PRIMARY KEY CLUSTERED ([ContactsID]) ON [PRIMARY]
 GO
